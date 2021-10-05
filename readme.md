@@ -41,10 +41,10 @@
 
 ```
 src
-│  next_id.txt //下一个用户将会使用的ID号
+│  next_id.txt                //下一个用户将会使用的ID号
 │
 ...
-├─ n //第n个用户的目录
+├─ n                          //第n个用户的目录
 │  │  department.txt          //保存部门信息
 │  │  name.txt                //名称
 │  │  school_number.txt       //学号
