@@ -28,7 +28,7 @@
 		{
 			echo "<script>window.alert(\"不存在此用户!\");</script>\n";
 			echo "<script>window.location.href='./login.php';</script>\n";
-			die(); 
+			die();
 		}
 		$_SESSION[uid]=$_GET[uid];
 		if($_GET[school_number]!=(int)file_get_contents("./src/$_SESSION[uid]/school_number.txt"))
@@ -46,7 +46,7 @@
 	}
 	else
 	{
-		//pattern="[0-9]+"
+		//
 		echo<<<'EOF'
 		
 		<div class="mdui-container doc-container">
@@ -56,13 +56,13 @@
 		<form name="input" action="./login.php" method="get">
 		<div class="mdui-textfield mdui-textfield-floating-label">
 		<label class="mdui-textfield-label">UserID</label>
-		<input class="mdui-textfield-input" type="text" name="uid"  required/>
+		<input class="mdui-textfield-input" type="text" name="uid" pattern="[0-9]+" required/>
 		<div class="mdui-textfield-error">编号只能包含数字</div>
 		<div class="mdui-textfield-helper">请输入您的用户编号</div>
 		  </div>
 		  <div class="mdui-textfield mdui-textfield-floating-label">
 		<label class="mdui-textfield-label">School number</label>
-		<input class="mdui-textfield-input" type="text" name="school_number" maxlength="8"  required/>
+		<input class="mdui-textfield-input" type="text" name="school_number" maxlength="8" pattern="[0-9]+" required/>
 		<div class="mdui-textfield-error">学号只能包含数字</div>
 		<div class="mdui-textfield-helper">请输入您的学号</div>
 		  </div>
