@@ -28,7 +28,7 @@
 		{
 			echo "<script>window.alert(\"不存在此用户!\");</script>\n";
 			echo "<script>window.location.href='./login.php';</script>\n";
-			die();
+			die(); 
 		}
 		$_SESSION[uid]=$_GET[uid];
 		if($_GET[school_number]!=(int)file_get_contents("./src/$_SESSION[uid]/school_number.txt"))
