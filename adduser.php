@@ -23,6 +23,11 @@
 		$_GET[name]=cleanInput($_GET[name]);
 		$_GET[school_number]=cleanInput($_GET[school_number]);
 		$_GET[department]=cleanInput($_GET[department]);
+		if(empty($_GET[school_number])||empty($_GET[name])||empty(department))
+		{
+			echo "<script>window.alert(\"无效的输入\");</script>\n";
+			die();
+		}
 		mkdir("./src/$nextID");
 		mkdir("./src/$nextID/pic");
 		file_put_contents("./src/$nextID/name.txt",$_GET[name]);
@@ -55,7 +60,7 @@ EOF;
 		
 		<div class="mdui-textfield mdui-textfield-floating-label">
 		<label class="mdui-textfield-label">Name</label>
-		<input class="mdui-textfield-input" type="text" name="name" />
+		<input class="mdui-textfield-input" type="text" name="name" maxlength="20" />
 		<div class="mdui-textfield-error">姓名只能包含汉字或英文字母</div>
 		<div class="mdui-textfield-helper">请输入您的姓名</div>
 		  </div>
@@ -68,7 +73,7 @@ EOF;
 		  
 		   <div class="mdui-textfield mdui-textfield-floating-label">
 		<label class="mdui-textfield-label">Department</label>
-		<input class="mdui-textfield-input" type="text" name="department" />
+		<input class="mdui-textfield-input" type="text" name="department" maxlength="20" />
 		<div class="mdui-textfield-error">部门只能包含汉字或英文字母或数字</div>
 		<div class="mdui-textfield-helper">请输入您的部门</div>
 		  </div>
