@@ -45,7 +45,7 @@
 
 		<form name="input" action="./adduser.php" method="get">
 		
-		<!-- 固定标签 -->
+	
   <div class="mdui-textfield">
     <label class="mdui-textfield-label">Userid</label>
     <input class="mdui-textfield-input" type="text" disabled placeholder="
