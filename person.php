@@ -59,13 +59,6 @@
 		<button type="button">添加账户</button>
 	</a>
 	<?php
-	///test/demo_form.php?name1=value1&name2=value2
-	
-		/*<form name="input" action="./person.php" method="get">
-		<input type="hidden" name="change" value="0">
-		<input type="submit" value="不显示我的照片">
-
-		</form>*/
 	if(file_get_contents("./src/$uid/show_pic.txt")==1)echo<<<'EOF'
 	<a href="./person.php?change=0">
 		<button type="button">不显示我的照片</button>
@@ -97,7 +90,7 @@ EOF;
 	echo<<<'EOF'
 	<form action="upload.php" method="post" enctype="multipart/form-data">
 	<input type="hidden" name="MAX_FILE_SIZE" value="10000000">
-	选择文件：<input type="file" name="myfile">
+	选择文件：<input type="file" name="myfile" accept="image/png" >
 	<input type="submit" value="上传文件">
 	</form>
 	<br><br>
